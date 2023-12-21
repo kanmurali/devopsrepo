@@ -1,0 +1,41 @@
+******Git Set Up and Commands *********
+----------------------------------------
+
+signup for github
+create or use existing pub/private key
+place pub key in github
+keep private key
+create .ssh folder in home directory
+create config file without extensions in .ssh folder
+Host github.com
+  HostName github.com
+  User git
+  PreferredAuthentications publickey
+  IdentityFile ~/<replace-your-file-name>ex:/.ssh/76awstraining
+
+git init --> intialises a folder as git repo
+
+git config --global user.name "your-user-name"
+git config --global user.email "your-email-id"
+
+Note: we need to config to identify who is commited code and mailid
+then create one file 
+touch sample.txt
+git status -->to check the status file 
+git add <file name > -- pushing in stayging area/index area
+git commit -m <commit message> commiting to local repo
+git remote add origin git@github.com:kanmurali/devopsrepo.git --> if your configuring first time we need to set the remote repo url 
+git push -u origin master --> pushing our code to github repo
+git diff -what is chaged but not staged
+git clone <URL> clone the repo from git hub repo
+git log  -->show the logs
+git rm <file> to remove the file
+git fetch [alias] -->fetch down all the branches from that Git remote
+git merge [alias]/[branch] -->merge a remote branch into your current branch to bring it up to date
+git push [alias] [branch] -->Transmit local branch commits to the remote repository branc
+git pull <URL>firsttime fetch and merge any commits from the tracking remote branc
+2 nd time use git pull --> changes are pull in to your pc
+git stash -->Save modified and staged changes
+git stash list -->list stack-order of stashed file changes
+git stash pop  -->write working from top of stash stack
+git stash drop -->discard the changes from top of stash stack
